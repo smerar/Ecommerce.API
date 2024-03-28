@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "37325e2e-8803-41c1-b894-5196f6c507e3",
+		"name": "Ecommerce.API .Net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AdminLogin",
+			"id": "d146d356-786b-4542-9299-e02438d20d02",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userKey\": \"1\",\r\n  \"name\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7298/api/Admin/AdminLogin"
+			},
+			"response": []
+		},
+		{
+			"name": "SaveCategory",
+			"id": "4a050341-a462-4482-9564-9d2018677379",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"Phone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7298/api/Admin/SaveCategory"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCategory",
+			"id": "e3dc51d5-e65f-4559-8fce-dbcd9effeef6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
