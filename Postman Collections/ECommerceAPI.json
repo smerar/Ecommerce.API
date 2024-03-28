@@ -34,6 +34,28 @@
 							"response": []
 						},
 						{
+							"name": "SaveCategory_Failed",
+							"id": "d55f9173-daf0-4869-aecb-389912ca8043",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/SaveCategory"
+							},
+							"response": []
+						},
+						{
 							"name": "UpdateCategory",
 							"id": "e3dc51d5-e65f-4559-8fce-dbcd9effeef6",
 							"protocolProfileBehavior": {
@@ -45,6 +67,28 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Laptops\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/UpdateCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateCategory_Failed",
+							"id": "4a96c8b6-c95b-45a0-b7b6-ff6b0e3edcdd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 100,\r\n  \"name\": \"Laptops\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -75,8 +119,28 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7298/api/Admin/DeleteCategory?deleteId=5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7298",
+									"path": [
+										"api",
+										"Admin",
+										"DeleteCategory"
+									],
+									"query": [
+										{
+											"key": "deleteId",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								}
 							},
 							"response": []
 						},
@@ -87,8 +151,28 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7298/api/Admin/DeleteCategory?deleteId=10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7298",
+									"path": [
+										"api",
+										"Admin",
+										"DeleteCategory"
+									],
+									"query": [
+										{
+											"key": "deleteId",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								}
 							},
 							"response": []
 						}
