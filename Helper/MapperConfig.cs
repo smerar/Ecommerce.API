@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Ecommerce.API.Data;
-using Ecommerce.API.Models.Users;
+
 
 namespace Ecommerce.API.Helper
 {
@@ -8,8 +8,7 @@ namespace Ecommerce.API.Helper
     {
         public MapperConfig()
         {
-            CreateMap<User, CreateUserModelDto>().ReverseMap();
-            CreateMap<User,GetUserDto>().ReverseMap();
+          
         }
     }
 }
