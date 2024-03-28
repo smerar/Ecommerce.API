@@ -40,8 +40,31 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Laptops\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/UpdateCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCategories",
+							"id": "92b5418d-a5e6-4e67-9cfe-4ff362709ede",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "https://localhost:7298/api/Admin/GetCategories"
 							},
 							"response": []
 						}
