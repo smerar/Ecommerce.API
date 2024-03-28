@@ -67,12 +67,36 @@
 								"url": "https://localhost:7298/api/Admin/GetCategories"
 							},
 							"response": []
+						},
+						{
+							"name": "DeleteCategory_Success",
+							"id": "7966c6b3-6eb1-4572-bacb-bc7866bdb9c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCategory_Failed",
+							"id": "311cdcf8-f18b-4a10-85d8-1bd04e8d8dff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "3615d91d-eca3-4c54-bab2-d34e49681b32"
 				},
 				{
-					"name": "AdminLogin",
+					"name": "AdminLogin_Success",
 					"id": "d146d356-786b-4542-9299-e02438d20d02",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -82,7 +106,29 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userKey\": \"1\",\r\n  \"name\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"raw": "{\r\n  \"userKey\": \"1\",\r\n  \"name\": \"string\",\r\n  \"email\": \"demo@gmail.com\",\r\n  \"password\": \"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7298/api/Admin/AdminLogin"
+					},
+					"response": []
+				},
+				{
+					"name": "AdminLogin_Failed",
+					"id": "c3152464-df60-40e9-a452-f5e3199f0742",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userKey\": \"1\",\r\n  \"name\": \"string\",\r\n  \"email\": \"demo1@gmail.com\",\r\n  \"password\": \"demo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
