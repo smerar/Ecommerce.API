@@ -108,7 +108,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "https://localhost:7298/api/Admin/GetCategories"
+								"url": "https://localhost:7298/api/General/GetCategories"
 							},
 							"response": []
 						},
@@ -178,6 +178,11 @@
 						}
 					],
 					"id": "3615d91d-eca3-4c54-bab2-d34e49681b32"
+				},
+				{
+					"name": "Products",
+					"item": [],
+					"id": "0f2e9157-8aa0-40ab-94b2-0c69b0fe9b0c"
 				},
 				{
 					"name": "AdminLogin_Success",
