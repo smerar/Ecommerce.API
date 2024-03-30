@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.DataModels.ResponseModels
 {
- public  class ResponseModel
+ public  class BaseResponseModel
     {
         public bool Status { get; set; }
         public string Message { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Ecommerce.API.DataModels.ResponseModels.AdminResponseModel
 {
-    public class CategoryTesponseModel:ResponseModel
+    public class CategoryTesponseModel:BaseResponseModel
     {
     
     }

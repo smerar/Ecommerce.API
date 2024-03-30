@@ -9,6 +9,7 @@ using Ecommerce.API.DataModels.ViewModels.AdminViewModels;
 using Ecommerce.DataModels.ResponseModels;
 using NuGet.Protocol;
 using Azure;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ecommerce.API.Controllers
 {
@@ -19,7 +20,7 @@ namespace Ecommerce.API.Controllers
       //  private readonly EcommerceApiDbContext _context;
 
         private readonly IAdminService _adminService;
-        public AdminController(IAdminService adminService) {
+        public AdminController(IAdminService adminService,IWebHostEnvironment env) {
         
           //  _context = context;
             _adminService = adminService;   
@@ -65,15 +66,7 @@ namespace Ecommerce.API.Controllers
 
              }
         }
-        //To get Categories
-        [HttpGet]
-        [Route("GetCategories")]
-        public IActionResult GetCategories()
-        {
-
-            var data = _adminService.GetCategories();
-            return Ok(data);
-        }
+        
         //To Delete Category
         [HttpDelete]
         [Route("DeleteCategory")]
@@ -162,6 +155,166 @@ namespace Ecommerce.API.Controllers
             }
 
         }
+
+        //............................PRODUCTS..........................
+
+        [HttpPost]
+        [Route("SaveProduct")]
+        public IActionResult SaveProduct(ProductModel newProduct)
+        {
+            try{
+                var data = _adminService.SaveProduct(newProduct);
+                var response = new
+                {
+                    status = true,
+                    message = "Product Successfully Saved",
+                    savedData = data,
+                };
+                return Ok(response);
+
+            }
+            catch(Exception ex) {
+
+                var response = new
+                {
+                    status = false,
+                    message = ex.Message
+                };
+                return Ok(response);
+
+            }
+        }
+
+      
+
+        
+
+
+        [HttpPut]
+        [Route("UpdateProductPrice")]
+        public IActionResult UpdateProductPrice(int id,int price)
+        {
+            try
+            {
+                var data = _adminService.UpdateProductPrice(id,price);
+                if (data)
+                {
+                    var response = new
+                    {
+                        status = true,
+                        message = "Updated successfully",
+                        updatedData = data
+                    };
+                    return Ok(response);
+                }
+                else
+                {
+                    var response = new
+                    {
+                        status = false,
+                        message = "The product doesnt exist ! ",
+                    };
+                    return Ok(response);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                var response = new
+                {
+                    status = false,
+                    message = "Error in updating",
+                    errorMessage = ex.Message,
+                };
+                return Ok(Response);
+            }
+
+        }
+
+        [HttpPut]
+        [Route("UpdateProductStock")]
+        public IActionResult UpdateProductStock(int id, int stock)
+        {
+            try
+            {
+                var data = _adminService.UpdateProductStock(id, stock);
+                if (data)
+                {
+                    var response = new
+                    {
+                        status = true,
+                        message = "Updated successfully",
+                    };
+                    return Ok(response);
+                }
+                else
+                {
+                    var response = new
+                    {
+                        status = false,
+                        message = "The product doesnt exist ! ",
+                    };
+                    return Ok(response);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                var response = new
+                {
+                    status = false,
+                    message = "Error in updating",
+                    errorMessage = ex.Message,
+                };
+                return Ok(Response);
+            }
+
+        }
+
+        [HttpDelete]
+        [Route("DeleteProduct")]
+        public IActionResult DeleteProduct(int Id)
+        {
+            try
+            {
+                var data = _adminService.DeleteProduct(Id);
+                if(data)
+                {
+                    var response = new
+                    {
+                        status = true,
+                        message = "Deleted successfully"
+                    };
+                    return Ok(response);
+                }
+                else
+                {
+
+                }
+                {
+                    var response = new
+                    {
+                        status = false,
+                        message = "Error in deleting the data"
+                    };
+                    return Ok(response);
+
+                }
+            }
+            catch(Exception ex)
+            {
+                var response = new
+                {
+                    status = false,
+                    message = "Cannot delete the item"
+                };
+                return Ok(response);
+
+            }
+           
+            
+        }
+
 
     }
 }
