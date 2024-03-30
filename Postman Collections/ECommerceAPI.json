@@ -227,6 +227,18 @@
 						"url": "https://localhost:7298/api/Admin/AdminLogin"
 					},
 					"response": []
+				},
+				{
+					"name": "UserRegistration",
+					"id": "c3a45443-fb50-4d38-b7ad-cbecc528eaf7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "95bc08e3-4575-4155-9eab-f1b99beb07f7"
@@ -253,6 +265,56 @@
 							}
 						},
 						"url": "https://localhost:7298/api/Admin/SaveProduct"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProducts",
+					"id": "20b673e0-d985-40a9-858d-92a6a0bd31c6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7298/api/General/GetProducts"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"id": "66b70962-bd74-464f-81e0-8f3adc4c4fdc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7298/api/Admin/UpdateProductPrice?id=1&price=2300",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7298",
+							"path": [
+								"api",
+								"Admin",
+								"UpdateProductPrice"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2300",
+									"type": "text"
+								}
+							]
+						}
 					},
 					"response": []
 				}
