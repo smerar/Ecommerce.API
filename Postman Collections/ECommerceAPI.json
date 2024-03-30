@@ -230,6 +230,34 @@
 				}
 			],
 			"id": "95bc08e3-4575-4155-9eab-f1b99beb07f7"
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "SaveProduct",
+					"id": "4a280569-8f8e-48a7-b78e-b903eba91fac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7298/api/Admin/SaveProduct"
+					},
+					"response": []
+				}
+			],
+			"id": "8fbdba02-066e-443d-b962-72c5319e8097"
 		}
 	]
 }
