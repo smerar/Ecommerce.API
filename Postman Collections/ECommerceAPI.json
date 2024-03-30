@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "37325e2e-8803-41c1-b894-5196f6c507e3",
+		"name": "Ecommerce.API .Net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "SaveCategory",
+							"id": "4a050341-a462-4482-9564-9d2018677379",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"Phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/SaveCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "SaveCategory_Failed",
+							"id": "d55f9173-daf0-4869-aecb-389912ca8043",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/SaveCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateCategory",
+							"id": "e3dc51d5-e65f-4559-8fce-dbcd9effeef6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Laptops\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/UpdateCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateCategory_Failed",
+							"id": "4a96c8b6-c95b-45a0-b7b6-ff6b0e3edcdd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 100,\r\n  \"name\": \"Laptops\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:7298/api/Admin/UpdateCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCategories",
+							"id": "92b5418d-a5e6-4e67-9cfe-4ff362709ede",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://localhost:7298/api/General/GetCategories"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCategory_Success",
+							"id": "7966c6b3-6eb1-4572-bacb-bc7866bdb9c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7298/api/Admin/DeleteCategory?deleteId=5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7298",
+									"path": [
+										"api",
+										"Admin",
+										"DeleteCategory"
+									],
+									"query": [
+										{
+											"key": "deleteId",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCategory_Failed",
+							"id": "311cdcf8-f18b-4a10-85d8-1bd04e8d8dff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7298/api/Admin/DeleteCategory?deleteId=10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7298",
+									"path": [
+										"api",
+										"Admin",
+										"DeleteCategory"
+									],
+									"query": [
+										{
+											"key": "deleteId",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "3615d91d-eca3-4c54-bab2-d34e49681b32"
+				},
+				{
+					"name": "Products",
+					"item": [],
+					"id": "0f2e9157-8aa0-40ab-94b2-0c69b0fe9b0c"
+				},
+				{
+					"name": "AdminLogin_Success",
+					"id": "d146d356-786b-4542-9299-e02438d20d02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userKey\": \"1\",\r\n  \"name\": \"string\",\r\n  \"email\": \"demo@gmail.com\",\r\n  \"password\": \"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7298/api/Admin/AdminLogin"
+					},
+					"response": []
+				},
+				{
+					"name": "AdminLogin_Failed",
+					"id": "c3152464-df60-40e9-a452-f5e3199f0742",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userKey\": \"1\",\r\n  \"name\": \"string\",\r\n  \"email\": \"demo1@gmail.com\",\r\n  \"password\": \"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7298/api/Admin/AdminLogin"
+					},
+					"response": []
+				},
+				{
+					"name": "UserRegistration",
+					"id": "c3a45443-fb50-4d38-b7ad-cbecc528eaf7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "95bc08e3-4575-4155-9eab-f1b99beb07f7"
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "SaveProduct",
+					"id": "4a280569-8f8e-48a7-b78e-b903eba91fac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7298/api/Admin/SaveProduct"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProducts",
+					"id": "20b673e0-d985-40a9-858d-92a6a0bd31c6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7298/api/General/GetProducts"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"id": "66b70962-bd74-464f-81e0-8f3adc4c4fdc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7298/api/Admin/UpdateProductPrice?id=1&price=2300",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7298",
+							"path": [
+								"api",
+								"Admin",
+								"UpdateProductPrice"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2300",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8fbdba02-066e-443d-b962-72c5319e8097"
+		},
+		{
+			"name": "Cart",
+			"item": [],
+			"id": "29e17bc1-afc0-4540-83f6-fd3217b3c60f"
+		}
+	]
+}
